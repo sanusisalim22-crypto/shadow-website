@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    background-color: #b8b3b3;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+nav {
+    background-color: #bccb47;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+p {
+    font-size: 20px;
+    opacity: 0.85;
+}
+.hero {
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 22px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #900;
+}
+.about {
+    margin-top: 120px;
+    padding: 60px 20px;
+    background-color: #111;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 20px;
+    opacity: 0.85;
+}
+.services {
+    margin-top: 100px;
+    padding: 60px 20px;
+    background-color: #181818;
+}
+
+.services h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.service-box {
+    background-color: #222;
+    padding: 25px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.service-box h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 18px;
+    opacity: 0.85;
+}
+.contact {
+    margin-top: 120px;
+    padding: 60px 20px;
+    background-color: #111;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: none;
+    background-color: #222;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.contact textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #a00000;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #000;
+    opacity: 0.7;
+    margin-top: 80px;
+}
+@media (max-width: 600px) {
+
+    nav a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .service-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 16px;
+    }
+
+    .contact button {
+        font-size: 16px;
+    }
+}
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-box {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
