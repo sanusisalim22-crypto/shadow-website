@@ -12,7 +12,7 @@
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <section class="hero">
@@ -44,20 +44,49 @@
             <p>Improving layout, styling, and user experience for existing sites.</p>
         </div>
     </section>
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-<body>
-    ... your content ...
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
         <p>© 2025 Shadow. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scroll animation script -->
+    <script>
+        const boxes = document.querySelectorAll('.service-box');
+        const sections = document.querySelectorAll('.about, .contact');
+        const footer = document.querySelector('footer');
+
+        function checkBoxes() {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) box.classList.add('show');
+                else box.classList.remove('show');
+            });
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) section.classList.add('show');
+                else section.classList.remove('show');
+            });
+
+            const footerTop = footer.getBoundingClientRect().top;
+            if (footerTop < window.innerHeight) footer.classList.add('show');
+        }
+
+        window.addEventListener('scroll', checkBoxes);
+        window.addEventListener('load', checkBoxes);
+    </script>
+
 </body>
 </html>
